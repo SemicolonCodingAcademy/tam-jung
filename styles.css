@@ -1,0 +1,353 @@
+:root {
+    --primary-color: #1a1a1a;
+    --accent-color: #00ff00;
+    --text-color: #ffffff;
+    --gradient: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('background.jpg');
+    background-size: cover;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.location-item {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.location-item:hover {
+    background: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--accent-color);
+}
+
+.feature-box {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.1);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.service-item {
+    background: var(--gradient);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.service-item i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.highlight {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.visible {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* 헤더 관련 스타일 수정 */
+header {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    background: rgba(255,255,255,0.05);
+}
+
+.nav-item a:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* 메인 컨텐츠 여백 조정 */
+main {
+    padding-top: 80px; /* 헤더 높이만큼 여백 추가 */
+}
+
+/* 지역 서비스 섹션 스타일 수정 */
+.locations-section {
+    padding: 4rem 2rem;
+    background: var(--gradient);
+}
+
+.location-area {
+    margin-bottom: 2rem;
+}
+
+.location-area h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.location-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.location-item {
+    background: rgba(255,255,255,0.05);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.location-item:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* SEO를 위한 숨겨진 텍스트 */
+.seo-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .location-items {
+        justify-content: center;
+    }
+    
+    .location-item {
+        width: calc(50% - 1rem);
+        text-align: center;
+    }
+}
+
+/* 메인 비주얼 섹션 개선 */
+.main-visual {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.visual-content {
+    text-align: center;
+    padding-top: 35vh;
+}
+
+.visual-content h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(0,255,0,0.3);
+}
+
+/* 고급스러운 버튼 디자인 */
+.cta-button a {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: linear-gradient(45deg, var(--accent-color), #00cc00);
+    color: var(--primary-color);
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,255,0,0.2);
+}
+
+.cta-button a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,255,0,0.3);
+}
+
+/* 전문성 섹션 스타일 */
+.expertise-section {
+    padding: 6rem 0;
+    background: var(--gradient);
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.expertise-item {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.expertise-item:hover {
+    transform: translateY(-10px);
+}
+
+.expertise-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+/* 프로세스 타임라인 스타일 */
+.process-section {
+    padding: 6rem 0;
+    background: #1a1a1a;
+}
+
+.process-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 3rem 2rem;
+    position: relative;
+}
+
+.process-step {
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+    font-size: 1.2rem;
+}
+
+/* 애니메이션 효과 */
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.slide-in:nth-child(1) { animation-delay: 0.3s; }
+.slide-in:nth-child(2) { animation-delay: 0.6s; }
+.slide-in:nth-child(3) { animation-delay: 0.9s; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* 반응형 디자인 개선 */
+@media (max-width: 768px) {
+    .visual-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-timeline {
+        grid-template-columns: 1fr;
+    }
+}
