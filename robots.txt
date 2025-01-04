@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tam-jung.com/sitemap.xml
