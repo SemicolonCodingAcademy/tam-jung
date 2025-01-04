@@ -10,19 +10,51 @@
     <title>원팀탐정사무소 - 전국 지역 흥신소 서비스</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta property="og:title" content="원팀탐정사무소 - 전국 지역 흥신소 서비스">
+    <meta property="og:description" content="15년 경력의 전문 탐정이 제공하는 합법적이고 신뢰할 수 있는 조사 서비스. 개인, 기업 맞춤형 해결책 제공.">
+    <meta property="og:image" content="/원팀탐정사무소.png">
+    <meta property="og:url" content="https://tam-jung.com">
+    <link rel="canonical" href="https://tam-jung.com">
+    
+    <!-- 구조화된 데이터 추가 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "원팀탐정사무소",
+        "image": "path/to/your/image.jpg",
+        "telephone": "010-4869-2858",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "서울특별시"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "37.5665",
+            "longitude": "126.9780"
+        },
+        "url": "https://yourwebsite.com",
+        "sameAs": [
+            "https://www.youtube.com/channel/UC-1yEH0MvdCUb4DSdAt6Ekg",
+            "https://talk.naver.com/ct/we1cnqf"
+        ]
+    }
+    </script>
 </head>
 <body>
     <header>
         <nav class="main-nav">
             <div class="nav-container">
-                <div class="nav-item" data-target="personal">
-                    <a href="#personal">개인 고객</a>
+                <div class="nav-item">
+                    <a href="#personal-section">개인 고객</a>
                 </div>
-                <div class="nav-item" data-target="business">
-                    <a href="#business">기업고객</a>
+                <div class="nav-item">
+                    <a href="#business-section">기업고객</a>
                 </div>
-                <div class="nav-item" data-target="corporate">
-                    <a href="#corporate">기업&자영업자 고객</a>
+                <div class="nav-item">
+                    <a href="#corporate-section">기업&자영업자 고객</a>
                 </div>
             </div>
         </nav>
@@ -311,27 +343,134 @@
             </div>
         </section>
 
-        <!-- 각 고객 유형별 섹션 -->
-        <section id="personal" class="customer-section">
-            <div class="container">
-                <h2>개인 고객 서비스</h2>
-                <div class="service-cards">
-                    <div class="service-card">
-                        <i class="fas fa-user-shield"></i>
-                        <h3>개인 신변 보호</h3>
-                        <p>불법 증거 자료의 제공시 거절, 개인 신변 보호</p>
-                        <ul>
-                            <li>불법 증거 자료 제공 거절</li>
-                            <li>개인 신변 보호 서비스</li>
-                            <li>국가 공공기관 협력</li>
-                        </ul>
-                    </div>
-                    <!-- 추가 서비스 카드들 -->
+        <!-- 각인 고객 섹션 -->
+        <section id="personal-section" class="service-section">
+            <h2>개인 고객 서비스</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>배우자 관련 조사</h3>
+                    <p>전문적이고 합법적인 방법으로 진행되는 조사 서비스</p>
+                    <ul>
+                        <li>불륜 및 부정행위 증거수집</li>
+                        <li>이성관계 확인 및 증거수집</li>
+                        <li>결혼 전 신상조사</li>
+                        <li>위자료 청구 증거자료</li>
+                        <li>재산은닉 및 증여 조사</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-search"></i>
+                    <h3>민사 관련 조사</h3>
+                    <p>전문적인 민사 사건 해결을 위한 조사</p>
+                    <ul>
+                        <li>채무자 소재파악/재산조사</li>
+                        <li>사기피해 증거수집</li>
+                        <li>명예훼손 증거수집</li>
+                        <li>스토커 및 협박 증거수집</li>
+                        <li>상속재산 및 불법증여 조사</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-child"></i>
+                    <h3>가족 관련 조사</h3>
+                    <p>가족 문제 해결을 위한 전문 서비스</p>
+                    <ul>
+                        <li>실종자 찾기</li>
+                        <li>친자확인 조사</li>
+                        <li>가출인 소재파악</li>
+                        <li>입양아 찾기</li>
+                        <li>상속인 찾기</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- 기업 고객 섹션도 유사한 구조로 구현 -->
+        <!-- 기업 고객 섹션 -->
+        <section id="business-section" class="service-section">
+            <h2>기업 고객 서비스</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <i class="fas fa-building-shield"></i>
+                    <h3>기업 보안 서비스</h3>
+                    <p>기업의 자산과 정보를 보호하는 전문 서비스</p>
+                    <ul>
+                        <li>산업스파이 적발 및 조사</li>
+                        <li>기술유출 증거수집</li>
+                        <li>영업비밀 유출 조사</li>
+                        <li>내부 정보유출 조사</li>
+                        <li>보안취약점 분석/대응</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-users-gear"></i>
+                    <h3>인사 노무 조사</h3>
+                    <p>기업 내부 문제 해결을 위한 전문 조사</p>
+                    <ul>
+                        <li>직원 비위행위 조사</li>
+                        <li>근태불량 증거수집</li>
+                        <li>허위 병가/휴가 조사</li>
+                        <li>퇴직자 경업금지 위반조사</li>
+                        <li>내부 부정행위 적발</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>기업 실사/조사</h3>
+                    <p>기업 거래 및 투자를 위한 전문 조사</p>
+                    <ul>
+                        <li>거래처 신용도 조사</li>
+                        <li>파트너사 실사</li>
+                        <li>투자 대상 기업 조사</li>
+                        <li>채권추심 지원</li>
+                        <li>기업 평판 조사</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 기업&자영업자 고객 섹션 -->
+        <section id="corporate-section" class="service-section">
+            <h2>기업&자영업자 고객 서비스</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <i class="fas fa-store-alt"></i>
+                    <h3>영업 피해 조사</h3>
+                    <p>자영업자를 위한 맞춤형 조사 서비스</p>
+                    <ul>
+                        <li>불법 영업 행위 조사</li>
+                        <li>경쟁업체 비방행위 조사</li>
+                        <li>상표권/특허권 침해 조사</li>
+                        <li>프랜차이즈 계약위반 조사</li>
+                        <li>영업방해 행위 증거수집</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>사업 관련 조사</h3>
+                    <p>사업상 발생하는 문제 해결 지원</p>
+                    <ul>
+                        <li>사업 파트너 신용조사</li>
+                        <li>임차인/임대인 신용조사</li>
+                        <li>채무자 재산/소재 파악</li>
+                        <li>사기 피해 증거수집</li>
+                        <li>계약 불이행 증거수집</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>평판 보호 서비스</h3>
+                    <p>기업과 개인의 평판 보호를 위한 서비스</p>
+                    <ul>
+                        <li>허위사실 유포자 특정</li>
+                        <li>악성 리뷰 대응</li>
+                        <li>온라인 명예훼손 대응</li>
+                        <li>브랜드 가치 보호</li>
+                        <li>위기 관리 컨설팅</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
