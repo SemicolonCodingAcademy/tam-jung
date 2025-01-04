@@ -1,4 +1,4 @@
-:root {
+ㅁ:root {
     --primary-color: #1a1a1a;
     --accent-color: #00ff00;
     --text-color: #ffffff;
@@ -350,4 +350,293 @@ main {
     .process-timeline {
         grid-template-columns: 1fr;
     }
+}
+
+/* 플로팅 버튼 스타일 */
+.floating-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.float-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.float-btn.call {
+    background: linear-gradient(135deg, #25d366, #128C7E);
+}
+
+.float-btn.naver {
+    background: linear-gradient(135deg, #03C75A, #02A54A);
+}
+
+.float-btn.youtube {
+    background: linear-gradient(135deg, #FF0000, #CC0000);
+}
+
+.float-btn .tooltip {
+    position: absolute;
+    right: 70px;
+    background: rgba(0,0,0,0.8);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.float-btn:hover {
+    transform: translateY(-5px);
+}
+
+.float-btn:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 연락처 섹션 스타일 */
+.contact-section {
+    padding: 6rem 0;
+    background: var(--gradient);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.contact-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: 1.5rem;
+    background: linear-gradient(45deg, var(--accent-color), #00cc00);
+    color: var(--primary-color);
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,255,0,0.2);
+}
+
+/* 신뢰성 보증 섹션 스타일 */
+.trust-section {
+    padding: 6rem 0;
+    background: #1a1a1a;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.trust-item {
+    text-align: center;
+    padding: 2rem;
+}
+
+.trust-icon {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .floating-buttons {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .float-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 링크 스타일 수정 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ONE TEAM 섹션 스타일 개선 */
+.team-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('path/to/pattern.png') repeat;
+    opacity: 0.05;
+}
+
+.team-section h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.team-item {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.team-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 10px 30px rgba(0,255,0,0.1);
+}
+
+.team-item h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.team-item h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--accent-color);
+}
+
+.team-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.team-item li {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.team-item li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* 고객 섹션 스타일 */
+.customer-section {
+    padding: 6rem 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.service-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.08);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.nav-item.active a {
+    background: var(--accent-color);
+    color: var(--primary-color);
 }
